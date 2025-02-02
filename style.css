@@ -28,7 +28,6 @@ body, html {
 
 }
 
-/* الخلفية المتغيرة */
 
 .gradient-background {
 
@@ -52,7 +51,6 @@ body, html {
 
 }
 
-/* تحريك الخلفية المتغيرة */
 
 @keyframes gradientAnimation {
 
@@ -64,7 +62,6 @@ body, html {
 
 }
 
-/* الخلفية السوداء */
 
 .main-container {
 
@@ -72,31 +69,30 @@ body, html {
 
     color: white;
 
-    padding: 50px 20px;  /* زيادة الـ padding */
+    padding: 50px 20px;  
 
-    width: 80%;  /* زيادة العرض */
+    width: 80%;  
 
-    max-width: 600px; /* تحديد حد أقصى للعرض */
+    max-width: 600px; 
 
     border-radius: 10px;
 
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
 
-    margin-top: 850px; /* تعديل المسافة من الأعلى */
+    margin-top: 850px; 
 
 }
 
-/* نص تسجيل الدخول */
+
 
 .login-message h1 {
 
-    font-size: 28px;  /* تكبير الخط */
+    font-size: 28px;  
 
     margin-bottom: 20px;
 
 }
 
-/* تصميم القائمة الاجتماعية */
 
 .social-media {
 
@@ -114,13 +110,13 @@ body, html {
 
     background-color: #333;
 
-    padding: 15px;  /* زيادة الحجم */
+    padding: 15px; 
 
     border-radius: 8px;
 
-    width: 90%;  /* جعل العناصر تمتد على طول الشاشة السوداء */
+    width: 90%;  
 
-    max-width: 300px; /* تحديد حد أقصى للعرض */
+    max-width: 300px; 
 
     margin: 10px auto;
 
@@ -138,7 +134,7 @@ body, html {
 
 .social-item img {
 
-    width: 50px; /* تكبير الأيقونات */
+    width: 50px; 
 
     margin-right: 10px;
 
@@ -146,13 +142,12 @@ body, html {
 
 .social-item span {
 
-    font-size: 22px;  /* تكبير النص */
+    font-size: 22px;  
 
     font-weight: bold;
 
 }
 
-/* قائمة الأسعار */
 
 .pricing-section {
 
@@ -192,7 +187,7 @@ body, html {
 
     border-radius: 8px;
 
-    width: 140px;  /* زيادة عرض البطاقات */
+    width: 140px; 
 
     display: flex;
 
@@ -202,9 +197,17 @@ body, html {
 
 }
 
+.header-text, .pricing-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .pricing-card span {
 
-    font-size: 20px; /* تكبير النص */
+    font-size: 20px; 
 
     color: white;
 
@@ -220,7 +223,7 @@ body, html {
 
     border: none;
 
-    padding: 10px 20px; /* زيادة الحجم */
+    padding: 10px 20px; 
 
     border-radius: 5px;
 
