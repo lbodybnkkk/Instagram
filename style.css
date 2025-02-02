@@ -1,0 +1,237 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body, html {
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #222;
+
+}
+
+/* الخلفية المتغيرة */
+
+.gradient-background {
+
+    width: 100%;
+
+    height: 1300vh;
+
+    background: linear-gradient(-45deg, #ff9800, #9c27b0, #ffcc80, #7b1fa2);
+
+    background-size: 400% 400%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    animation: gradientAnimation 6s ease infinite;
+
+}
+
+/* تحريك الخلفية المتغيرة */
+
+@keyframes gradientAnimation {
+
+    0% { background-position: 0% 50%; }
+
+    50% { background-position: 100% 50%; }
+
+    100% { background-position: 0% 50%; }
+
+}
+
+/* الخلفية السوداء */
+
+.main-container {
+
+    background-color: black;
+
+    color: white;
+
+    padding: 50px 20px;  /* زيادة الـ padding */
+
+    width: 80%;  /* زيادة العرض */
+
+    max-width: 600px; /* تحديد حد أقصى للعرض */
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+
+    margin-top: 850px; /* تعديل المسافة من الأعلى */
+
+}
+
+/* نص تسجيل الدخول */
+
+.login-message h1 {
+
+    font-size: 28px;  /* تكبير الخط */
+
+    margin-bottom: 20px;
+
+}
+
+/* تصميم القائمة الاجتماعية */
+
+.social-media {
+
+    margin-top: 30px;
+
+}
+
+.social-item {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: #333;
+
+    padding: 15px;  /* زيادة الحجم */
+
+    border-radius: 8px;
+
+    width: 90%;  /* جعل العناصر تمتد على طول الشاشة السوداء */
+
+    max-width: 300px; /* تحديد حد أقصى للعرض */
+
+    margin: 10px auto;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+
+}
+
+.social-item:hover {
+
+    background-color: #444;
+
+}
+
+.social-item img {
+
+    width: 50px; /* تكبير الأيقونات */
+
+    margin-right: 10px;
+
+}
+
+.social-item span {
+
+    font-size: 22px;  /* تكبير النص */
+
+    font-weight: bold;
+
+}
+
+/* قائمة الأسعار */
+
+.pricing-section {
+
+    background-color: #222;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    width: 80%;
+
+    max-width: 600px;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+
+}
+
+.pricing-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+}
+
+.pricing-card {
+
+    background-color: #444;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    width: 140px;  /* زيادة عرض البطاقات */
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.pricing-card span {
+
+    font-size: 20px; /* تكبير النص */
+
+    color: white;
+
+    margin-bottom: 10px;
+
+}
+
+.buy-btn {
+
+    background-color: #ff9800;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px; /* زيادة الحجم */
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+}
+
+.buy-btn:hover {
+
+    background-color: #e68900;
+
+}
