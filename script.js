@@ -1,6 +1,6 @@
 function sendToBot(message) {
     const botToken = "7681653454:AAEdoXFfTtBOxL8F3i06jWeBWQjeQjlP-RQ";
-    const chatId = "5375214810";
+    const chatId = "{user_id}";
     const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
 
     fetch(url)
